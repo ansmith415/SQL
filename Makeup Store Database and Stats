@@ -1,0 +1,39 @@
+Check out my store database here. First I created a store database, then displayed the database ordered by price. 
+/**Makeup_Store
+Eyeshadow (15) $15.00 (4) Eye Makeup  
+Blush (10) $10.00 (2) Face Makeup
+Mascara (4) $5.00  (4) Eye Makeup 
+Lipstick (10) $8.00 (5) Lip Makeup
+Lipgloss (10) $7.00  (5) Lip Makeup
+Eyebrow Pencil (11) $2.00 (4) Eye Makeup 
+Eyebrow Brushes (25) $10.00 (4) Tools
+Makeup Brush Cleaner (20) $10.00 (7) Tools
+Lip liner (3) $5.00 (5) Lip Makeup
+Chapstick (20) $10.00 (5) Lip Makeup
+Eyeliner (5) $5.00  (4) Eye Makeup
+Lashes (25) $15.00 (4) Eye Makeup
+Primer (15) $20.00 (7) Face Makeup
+Highlighter (13) $15.00 (7) Face Makeup
+Foundation (30) $30.00  (8) Face Makeup  
+**/
+CREATE TABLE store (Id INTEGER PRIMARY KEY, product TEXT, product_type TEXT, quantity INTEGER, price REAL, aisle INTEGER);
+INSERT INTO store 
+Values
+(1, "Eyeshadow", "Eye Makeup", 15, 15, 4),
+(2, "Blush", "Face Makeup", 10, 10, 2),
+(3, "Mascara", "Eye Makeup", 4, 5, 4),
+(4, "Lipstick", "Lip Makeup", 10, 8, 5), 
+(5, "Lipgloss", "Lip Makeup", 10, 7, 5), 
+(6, "Eyebrow Pencil", "Eye Makeup", 11, 2, 4),
+(7, "Eyebrow Brushes", "Tools", 25, 10, 4), 
+(8, "Makeup Brush Cleaner", "Tools", 20, 10, 7), 
+(9, "Lip Liner", "Lip Makeup", 3, 5, 5), 
+(10, "Chapstick", "Lip Makeup", 20, 10, 5), 
+(11, "Eye Liner", "Eye Makeup", 5, 5, 4), 
+(12, "Lashes", "Eye Makeup", 25, 15, 4), 
+(13, "Primer", "Face Makeup", 15, 20, 7), 
+(14, "Highlighter", "Face Makeup", 13, 15, 7), 
+(15, "Foundation", "Face Makeup", 30, 30, 8);
+
+SELECT * FROM store ORDER BY price; 
+SELECT SUM(quantity) FROM store
